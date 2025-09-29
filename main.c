@@ -1,4 +1,3 @@
-#include <stdbool.h>
 #include <stdio.h>
 
 int main(void) {
@@ -12,8 +11,6 @@ int main(void) {
     }
     pfrase2--;
 
-    bool palindromo = true;
-
     while (*pfrase1 != '\0') {
         while (*pfrase1 == ' ') {
             pfrase1 ++;
@@ -22,19 +19,15 @@ int main(void) {
             pfrase2--;
         }
         if (*pfrase1 != *pfrase2) {
-            palindromo = false;
-            break;
+            printf("La frase NON e' palindromo\n");
+            return 0;
         }
 
         pfrase1++;
         pfrase2--;
     }
 
-    if (palindromo) {
-        printf("La frase e' palindroma\n");
-    } else {
-        printf("La frase NON e' palindromo\n");
-    }
+    printf("La frase e' palindroma\n");
 
     return 0;
 }
