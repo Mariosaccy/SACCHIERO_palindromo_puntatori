@@ -11,7 +11,7 @@ int main(void) {
     }
     pfrase2--;
 
-    while (pfrase1 > pfrase2) {
+    while (pfrase1 < pfrase2) {
         while (*pfrase1 == ' ') {
             pfrase1 ++;
         }
